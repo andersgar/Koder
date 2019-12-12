@@ -1,6 +1,6 @@
 const int ledPins[] = {0, 1, 2, 3, 4};
 bool ledStates[] = {0, 0, 0, 0, 0};
-int interval = 50;
+int interval = 250;
 
 void setup() {
   for(int i = 0; i < 5; i++){
@@ -14,12 +14,12 @@ void loop() {
       delay(interval);
       int ledPin = ledPins[i];
       bool ledState = ledStates[i];
-      if(state = 0){
+      if(ledState = 0){
         digitalWrite(ledPin, HIGH);
-        state = 1;
+        ledState = 1;
       }
-      else if(state = 1){
-        state = 0;
+      else if(ledState = 1){
+        ledState = 0;
         digitalWrite(ledPin, LOW);
       }
   }
